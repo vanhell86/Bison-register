@@ -22,3 +22,4 @@
     There are 4 pages. which are Add participant and Add results, Stage results, Participant result. 
     
     
+![](public/assets/gif/screenshot1.gif)
