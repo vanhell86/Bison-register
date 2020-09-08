@@ -5,6 +5,11 @@
       <change afterPath="$PROJECT_DIR$/../ScandiWeb/core/Database.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Tieto_Ruby_js/other_HA/post_service1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ResultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ResultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../home-assignments" beforeDir="false" afterPath="$PROJECT_DIR$/../home-assignments" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +22,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -172,6 +177,8 @@
       <workItem from="1598548066752" duration="4037000" />
       <workItem from="1598561292248" duration="6308000" />
       <workItem from="1598609035885" duration="16593000" />
+      <workItem from="1598979500996" duration="606000" />
+      <workItem from="1599554080442" duration="1997000" />
     </task>
     <servers />
   </component>
@@ -207,5 +214,9 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="624" y="238" key="run.anything.popup/0.0.1920.1044@0.0.1920.1044" timestamp="1598620295497" />
+    <state x="623" y="230" key="search.everywhere.popup" timestamp="1598629213622">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="623" y="230" key="search.everywhere.popup/0.0.1920.1044@0.0.1920.1044" timestamp="1598629213622" />
   </component>
 </project>

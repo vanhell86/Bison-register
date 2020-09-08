@@ -14,7 +14,7 @@ class ParticipantController extends Controller
     {
         $participants = Participant::
         orderByRaw("CAST(SUBSTRING(age_group,2,99) as unsigned) ,'desc'")
-            ->get();
+            ->get();    // order by from 2 symbol in age group
         return view('participants.index', compact('participants'));
     }
 
@@ -37,7 +37,7 @@ class ParticipantController extends Controller
     {
         $pId = Participant::select('id')->get();
 
-        foreach ($pId as $id) {
+        foreach ($pId as $id) { // get five best participants results
             $points = Result::select('points')
                 ->where('participant_id', $id['id'])
                 ->limit(5)
@@ -46,7 +46,7 @@ class ParticipantController extends Controller
             foreach ($points as $point) {
                 $sum += $point['points'];
             }
-            DB::table('participants')
+            DB::table('participants')   // update points
                 ->where('id', $id['id'])
                 ->update(['total_points' => $sum]);
         }

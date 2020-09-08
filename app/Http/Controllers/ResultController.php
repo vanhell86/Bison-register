@@ -35,7 +35,8 @@ class ResultController extends Controller
 
     public function index()
     {
-        $results = Result::OrderByRaw("LENGTH(age_group), age_group")->get();
+        $results = Result::OrderByRaw("LENGTH(age_group), age_group")->OrderBy("points", 'desc')// order by length
+            ->get();                                                              //and age group, then order by points
 
         return view('results.index', compact('results'));
     }
@@ -50,7 +51,7 @@ class ResultController extends Controller
         $stages = range(1, 8);
         $best_time = [];
 
-        foreach ($age_group as $age) {
+        foreach ($age_group as $age) {      // get best time in each stage in each age group
             foreach ($stages as $stage) {
                 $best_time[$stage][$age] = Result::where('age_group', $age)
                     ->where('stage_number', $stage)
@@ -58,16 +59,15 @@ class ResultController extends Controller
             }
         }
 
-        foreach ($best_time as $stageN => $stage) {
-            foreach ($stage as $group => $time) {
-                if ($time === null)
+        foreach ($best_time as $stageN => $stage) { // go through all stages
+            foreach ($stage as $group => $time) {   // go through all age group
+                if ($time === null) // if no result, then skip rest
                     continue;
-                $pTimes = Result::select('participant_id', 'time')
+                $pTimes = Result::select('participant_id', 'time')  // get all participants time
                     ->where('age_group', $group)
                     ->where('stage_number', $stageN)->get();
 
-                foreach ($pTimes as $pTime) {
-
+                foreach ($pTimes as $pTime) {   // calculate each participants points
                     DB::table('results')
                         ->where('participant_id', $pTime['participant_id'])
                         ->where('age_group', $group)
